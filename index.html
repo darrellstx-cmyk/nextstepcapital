@@ -1,0 +1,1198 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Next Step Capital Group, LLC | Sell Your Texas Property Fast</title>
+  <meta name="description" content="Sell your Texas property fast for cash. Get a direct offer in 24–48 hours from Next Step Capital Group. No agents, no commissions, flexible closing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #020915;
+      --bg2: #07192b;
+      --text: #e8f0ff;
+      --muted: #9bb0cc;
+      --gold: #e0b74a;
+      --gold2: #f6d66a;
+      --accent: #1c6fb6;
+      --accent2: #32a0ff;
+      --line: rgba(15,60,110,.7);
+      --card: rgba(8,26,50,.9);
+      --shadow: 0 18px 45px rgba(0,0,0,.7);
+      --radius: 12px;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 10% -10%, rgba(50,160,255,.3), transparent 55%),
+        radial-gradient(circle at 90% 110%, rgba(224,183,74,.18), transparent 55%),
+        var(--bg);
+      line-height: 1.6;
+    }
+
+    a { color: inherit; }
+
+    .wrap {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ── NAV ── */
+    .nav-outer {
+      background: rgba(2,9,21,.94);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 16px;
+    }
+    .brand { display: flex; gap: 12px; align-items: center; }
+    .mark {
+      width: 44px; height: 44px; border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,.5);
+      border: 1px solid rgba(212,175,55,.35);
+      background: radial-gradient(circle at 30% 0, rgba(242,207,91,.4), rgba(6,21,32,1));
+      display: flex; align-items: center; justify-content: center;
+    }
+    .mark img {
+      width: 100%; height: 100%; object-fit: cover;
+      display: block;
+    }
+    .brand-text h1 {
+      margin: 0; font: 800 13px/1.2 Montserrat, sans-serif;
+      letter-spacing: .5px; text-transform: uppercase;
+    }
+    .brand-text small {
+      display: block; color: var(--muted);
+      font: 400 11px/1.3 Inter, sans-serif; margin-top: 2px;
+    }
+    .nav-right { display: flex; gap: 12px; align-items: center; }
+    .nav-phone {
+      color: var(--muted); font-size: 13px; text-decoration: none;
+      font-weight: 500;
+    }
+    .nav-phone:hover { color: var(--gold); }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      padding: 12px 24px; border-radius: 999px; border: 1px solid rgba(255,255,255,.06);
+      background: linear-gradient(135deg, var(--accent), var(--gold2));
+      color: #020915;
+      text-decoration: none; font-weight: 700; font-size: 15px;
+      cursor: pointer; transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+      letter-spacing: .3px;
+      box-shadow: 0 12px 30px rgba(0,0,0,.6);
+    }
+    .btn:hover {
+      filter: brightness(1.05);
+      transform: translateY(-1px);
+      box-shadow: 0 16px 40px rgba(0,0,0,.8);
+    }
+
+    /* ── HERO ── */
+    .hero {
+      position: relative;
+      text-align: center;
+      padding: 100px 20px 88px;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 35%;
+      transform: translate(-50%, -35%);
+      width: 1180px;
+      height: 1180px;
+      max-width: 150vw;
+      max-height: 150vw;
+      background: url("assets/logo.png") center/contain no-repeat;
+      opacity: .16;
+      filter: drop-shadow(0 26px 60px rgba(0,0,0,.9));
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero-title {
+      font: 800 48px/1.1 Montserrat, sans-serif;
+      letter-spacing: .3px; max-width: 700px; margin: 0 auto 16px;
+      position: relative; z-index: 1;
+    }
+    .hero-subtitle {
+      font: 700 24px/1.2 Montserrat, sans-serif;
+      color: var(--accent2);
+      margin-bottom: 28px;
+      text-shadow: 0 0 24px rgba(50,160,255,.6);
+      position: relative; z-index: 1;
+    }
+    .hero-desc {
+      color: var(--muted); font-size: 17px; line-height: 1.7;
+      max-width: 540px; margin: 0 auto 36px;
+      position: relative; z-index: 1;
+    }
+    .hero-proof {
+      color: var(--muted); font-size: 15px; line-height: 1.6;
+      max-width: 540px; margin: 0 auto 24px;
+      position: relative; z-index: 1;
+    }
+    .hero-cta { margin-bottom: 16px; position: relative; z-index: 1; }
+    .hero-cta .btn {
+      padding: 18px 42px; font-size: 19px; border-radius: 10px;
+    }
+    .hero-phone {
+      color: var(--muted); font-size: 15px;
+      position: relative; z-index: 1;
+    }
+    .hero-trust {
+      display: flex; flex-direction: column; align-items: center;
+      gap: 4px; margin-bottom: 20px;
+      position: relative; z-index: 1;
+    }
+    .hero-stars {
+      color: var(--gold2); font-size: 20px; letter-spacing: 2px;
+      text-shadow: 0 0 18px rgba(224,183,74,.8);
+    }
+    .hero-trust-text {
+      color: var(--muted); font-size: 13px; font-weight: 500;
+    }
+    .hero-phone a {
+      color: var(--gold); text-decoration: none; font-weight: 600;
+    }
+    .hero-phone a:hover { text-decoration: underline; }
+
+    /* ── WHY SECTION ── */
+    .why-section {
+      padding: 64px 0;
+    }
+    .why-section h2 {
+      font: 800 28px/1.2 Montserrat, sans-serif;
+      text-align: center; margin-bottom: 40px;
+    }
+    .why-grid {
+      display: grid; grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px; list-style: none;
+    }
+    .why-grid.process-grid{
+      grid-template-columns: 1fr;
+      gap: 16px;
+      max-width: 840px;
+      margin: 0 auto;
+    }
+    .why-item {
+      text-align: center; padding: 0 8px;
+    }
+    .why-icon {
+      width: 56px; height: 56px; border-radius: 16px;
+      background: radial-gradient(circle at 20% 0, rgba(246,214,106,.9), rgba(7,25,43,1));
+      border: 1px solid rgba(246,214,106,.9);
+      display: grid; place-items: center;
+      margin: 0 auto 14px; font-size: 24px;
+      color: #020915;
+      box-shadow: 0 18px 40px rgba(0,0,0,.9);
+    }
+    .why-item h3 {
+      font: 700 16px/1.3 Montserrat, sans-serif;
+      margin-bottom: 8px;
+    }
+    .why-grid.process-grid .why-item h3{
+      font-size: 17px;
+      font-weight: 800;
+    }
+    .why-item p {
+      color: var(--muted); font-size: 14px; line-height: 1.6;
+    }
+
+    /* ── FORM SECTION ── */
+    .form-section {
+      padding: 64px 0 80px;
+    }
+    .form-wrapper {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px 20px 48px;
+      border-radius: var(--radius);
+      border: none;
+      background: transparent;
+      box-shadow: none;
+    }
+    .form-wrapper h2 {
+      font: 800 26px/1.2 Montserrat, sans-serif;
+      text-align: center; margin-bottom: 6px;
+    }
+    .form-wrapper .form-sub {
+      text-align: center; color: var(--muted); font-size: 15px;
+      margin-bottom: 28px;
+    }
+    .form-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .form-group { margin-bottom: 16px; }
+    .form-group.full { grid-column: 1 / -1; }
+    label {
+      display: block; font-size: 13px; color: var(--muted);
+      margin-bottom: 6px; font-weight: 500;
+    }
+    input, select, textarea {
+      width: 100%; padding: 12px 14px;
+      border-radius: 8px;
+      border: 1px solid rgba(155,176,204,.55);
+      background: rgba(4,12,25,.96);
+      color: var(--text);
+      font-size: 15px; font-family: inherit; outline: none;
+      transition: border-color .15s, box-shadow .15s ease, background-color .15s ease;
+    }
+    input::placeholder,
+    textarea::placeholder {
+      color: rgba(155,176,204,.85);
+    }
+    select {
+      cursor: pointer;
+      background-color: rgba(4,12,25,.96);
+    }
+    select option {
+      background-color: #020915;
+      color: #e8f0ff;
+    }
+    input:focus, select:focus, textarea:focus {
+      border-color: rgba(246,214,106,.9);
+      box-shadow: 0 0 0 1px rgba(246,214,106,.6);
+    }
+    textarea { min-height: 80px; resize: vertical; }
+    select { cursor: pointer; }
+    .form-submit {
+      text-align: center; margin-top: 24px;
+    }
+    .form-submit .btn {
+      width: 100%; padding: 16px; font-size: 17px; border-radius: 10px;
+    }
+    .trust-line {
+      text-align: center; color: var(--muted); font-size: 13px;
+      margin-top: 12px;
+    }
+    .form-legal {
+      text-align: center; color: var(--muted); font-size: 12px;
+      margin-top: 12px; line-height: 1.5;
+    }
+    .form-embed {
+      margin-top: 24px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(15,60,110,.9);
+      box-shadow: 0 22px 60px rgba(0,0,0,.75);
+    }
+    .form-embed iframe {
+      width: 100%;
+      height: 1400px;
+      border: none;
+      background: #020915;
+    }
+
+    /* ── PREMIUM WIZARD UI ── */
+    .wiz-card{
+      background: rgba(0,0,0,.35);
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:16px;
+      padding:18px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+      backdrop-filter: blur(6px);
+    }
+    .wiz-top{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      margin-bottom:10px;
+    }
+    .wiz-title{
+      font-size:1.2rem;
+      font-weight:800;
+      margin:0;
+    }
+    .wiz-sub{
+      margin:6px 0 0 0;
+      opacity:.85;
+      font-size:.95rem;
+    }
+    .wiz-progress{
+      height:10px;
+      background: rgba(255,255,255,.10);
+      border-radius:99px;
+      overflow:hidden;
+      flex: 1;
+      min-width: 140px;
+    }
+    .wiz-progress > div{
+      height:100%;
+      width:0%;
+      background: linear-gradient(90deg, rgba(50,160,255,.85), rgba(50,255,200,.75));
+      transition: width .25s ease;
+    }
+    .wiz-step{
+      display:none;
+      margin-top:14px;
+    }
+    .wiz-step.active{ display:block; }
+
+    .wiz-grid{
+      display:grid;
+      gap:12px;
+    }
+    .wiz-grid.two{ grid-template-columns: 1fr 1fr; }
+    .wiz-grid.three{ grid-template-columns: 1fr 140px 140px; }
+    @media (max-width: 720px){
+      .wiz-grid.two, .wiz-grid.three{ grid-template-columns: 1fr; }
+    }
+
+    .wiz-input, .wiz-select, .wiz-textarea{
+      width:100%;
+      padding:12px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(0,0,0,.30);
+      color:#fff;
+      outline:none;
+    }
+    .wiz-textarea{ min-height: 110px; resize: vertical; }
+
+    .wiz-actions{
+      display:flex;
+      gap:10px;
+      justify-content:flex-end;
+      margin-top:12px;
+      flex-wrap:wrap;
+    }
+    .wiz-btn{
+      padding:12px 14px;
+      border-radius:12px;
+      border:1px solid rgba(255,255,255,.18);
+      background: rgba(50,160,255,.18);
+      color:#fff;
+      font-weight:800;
+      cursor:pointer;
+    }
+    .wiz-btn.secondary{
+      background: transparent;
+    }
+    .wiz-btn:disabled{
+      opacity:.6;
+      cursor:not-allowed;
+    }
+    .wiz-status{
+      margin-top:10px;
+      font-size:.95rem;
+      opacity:.9;
+    }
+    .wiz-note{
+      font-size:.85rem;
+      opacity:.75;
+      margin-top:8px;
+    }
+    .wiz-row{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .wiz-row input[type="checkbox"]{ margin-top:3px; }
+
+    .top-announcement{
+      background: var(--gold);
+      color:#020915;
+      text-align:center;
+      padding:6px 12px;
+      font-weight:700;
+      font-size:13px;
+    }
+
+    .hero-micro{
+      margin-top:16px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px 20px;
+      justify-content:center;
+      font-size:14px;
+      color:var(--muted);
+    }
+    .hero-micro-item{
+      display:flex;
+      align-items:center;
+      gap:6px;
+    }
+    .hero-micro-dot{
+      width:6px;
+      height:6px;
+      border-radius:999px;
+      background:var(--gold2);
+    }
+
+    .form-top-spacing{
+      margin-top:40px;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      padding: 32px 0;
+      display: flex; justify-content: space-between; gap: 16px;
+      flex-wrap: wrap; color: var(--muted); font-size: 12px;
+    }
+    .footer a { color: var(--gold); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+    .footer-left { line-height: 1.6; }
+    .footer-right { line-height: 1.6; text-align: right; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 56px 12px 48px;
+      }
+      .hero::before {
+        top: 40%;
+        transform: translate(-50%, -35%);
+        width: 820px;
+        height: 820px;
+        max-width: 120vw;
+        max-height: 120vw;
+        opacity: .14;
+      }
+      .hero-title { font-size: 34px; }
+      .hero-subtitle { font-size: 18px; }
+      .hero-desc { font-size: 15px; }
+
+      .hero-micro{
+        font-size:13px;
+        gap:6px 12px;
+        padding:0 8px;
+        text-align:center;
+      }
+
+      .form-top-spacing{
+        margin-top:28px;
+      }
+
+      .why-grid {
+        grid-template-columns: 1fr;
+        gap: 24px; max-width: 360px; margin: 0 auto;
+      }
+      .why-grid.process-grid{
+        max-width: 720px;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+      }
+      .why-grid.process-grid{
+        max-width: 720px;
+        margin: 0 auto;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .form-wrapper { padding: 28px 20px; }
+      .form-grid { grid-template-columns: 1fr; }
+
+      .nav-right { gap: 8px; }
+      .nav-phone { display: none; }
+      .btn-nav { padding: 10px 16px; font-size: 13px; }
+
+      .footer { flex-direction: column; text-align: center; }
+      .footer-right { text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 44px 12px 40px;
+      }
+      .hero::before {
+        top: 38%;
+        transform: translate(-50%, -32%);
+        width: 620px;
+        height: 620px;
+        max-width: 120vw;
+        max-height: 120vw;
+        opacity: .13;
+      }
+      .hero-title { font-size: 28px; }
+      .hero-subtitle { font-size: 16px; }
+      .brand-text h1 { font-size: 11px; }
+      .brand-text small { font-size: 10px; }
+
+      .why-grid.process-grid{
+        grid-template-columns: 1fr;
+        max-width: 360px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="top-announcement">
+    RGV Homeowners: Get a Direct Cash Offer in 24–48 Hours
+  </div>
+
+  <!-- NAV -->
+  <div class="nav-outer">
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">
+          <div class="mark">
+            <img src="assets/logo.png" alt="Next Step Capital Group logo">
+          </div>
+          <div class="brand-text">
+            <h1>Next Step Capital Group</h1>
+            <small>Texas Real Estate Acquisitions</small>
+          </div>
+        </div>
+        <div class="nav-right">
+          <a class="nav-phone" href="tel:+19567620089">(956) 762-0089</a>
+          <a class="btn btn-nav" href="#offer-form">
+            Get a Direct Offer
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <h2 class="hero-title">We Buy Houses in the Rio Grande Valley.</h2>
+      <div class="hero-subtitle">Cash Offers in 24–48 Hours. No Fees. No Repairs.</div>
+      <p class="hero-desc">
+        Behind on payments? Inherited a property? Need to sell fast?
+        We buy houses in Hidalgo, Cameron, and Starr County — as-is.
+      </p>
+      <p style="text-align:center;color:var(--gold2);font-weight:600;margin-top:20px;">Based in Mission, TX • Serving the Entire RGV</p>
+      <div class="hero-cta">
+        <a class="btn" href="#offer-form">
+          Get My Fast Cash Offer Now
+        </a>
+      </div>
+      <div class="hero-micro">
+        <div class="hero-micro-item">
+          <span class="hero-micro-dot"></span>
+          <span>No commissions or fees</span>
+        </div>
+        <div class="hero-micro-item">
+          <span class="hero-micro-dot"></span>
+          <span>No repairs or cleaning</span>
+        </div>
+        <div class="hero-micro-item">
+          <span class="hero-micro-dot"></span>
+          <span>You choose the closing date</span>
+        </div>
+      </div>
+      <div class="hero-trust">
+        <span class="hero-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span class="hero-trust-text">161+ Verified 5-Star Transactions</span>
+        <p style="color:var(--muted);font-size:13px;margin-top:6px;">Known for Fast Communication &amp; Reliable Closings</p>
+      </div>
+      <div class="hero-phone">
+        Or call <a href="tel:+19567620089">(956) 762-0089</a>
+      </div>
+    </section>
+
+    <!-- SELLER FORM (premium multi-step wizard) -->
+    <section class="form-section form-top-spacing" id="offer-form">
+      <div class="form-wrapper">
+        <div class="wiz-card" id="seller-intake">
+          <div class="wiz-top">
+            <div style="min-width:220px;">
+              <h2 class="wiz-title">Get Your Fair Cash Offer</h2>
+              <p class="wiz-sub">Step 1 saves instantly so you don't lose your place.</p>
+            </div>
+            <div class="wiz-progress" aria-label="Progress">
+              <div id="sellerProg"></div>
+            </div>
+            <div id="sellerStepLabel" style="min-width:90px;text-align:right;font-weight:800;">1 / 3</div>
+          </div>
+
+          <div id="sellerStatus" class="wiz-status"></div>
+
+          <!-- STEP 1 -->
+          <div class="wiz-step active" id="sellerStep1">
+            <div class="wiz-grid two">
+              <input class="wiz-input" id="s_name" placeholder="Full Name *" autocomplete="name" required>
+              <input class="wiz-input" id="s_phone" placeholder="Phone Number *" autocomplete="tel" required>
+            </div>
+
+            <div class="wiz-grid">
+              <input class="wiz-input" id="s_address" placeholder="Property Address *" autocomplete="street-address" required>
+            </div>
+
+            <div class="wiz-grid three">
+              <input class="wiz-input" id="s_city" placeholder="City" autocomplete="address-level2">
+              <input class="wiz-input" id="s_state" placeholder="State" value="TX" autocomplete="address-level1">
+              <input class="wiz-input" id="s_zip" placeholder="Zip" autocomplete="postal-code">
+            </div>
+
+            <div class="wiz-actions">
+              <button class="wiz-btn" id="sellerSaveContinue">Save &amp; Continue</button>
+            </div>
+
+            <div class="wiz-note">By continuing, you agree we may contact you about your request. Final consent is on Step 3.</div>
+          </div>
+
+          <!-- STEP 2 -->
+          <div class="wiz-step" id="sellerStep2">
+            <div class="wiz-grid two">
+              <select class="wiz-select" id="s_occupancy">
+                <option value="">Is the property occupied?</option>
+                <option>Owner occupied</option>
+                <option>Tenant occupied</option>
+                <option>Vacant</option>
+                <option>Not sure</option>
+              </select>
+
+              <select class="wiz-select" id="s_propertyType">
+                <option value="">Property type</option>
+                <option>Single family</option>
+                <option>Duplex/Triplex/4-plex</option>
+                <option>Mobile home</option>
+                <option>Land/Lot</option>
+                <option>Other</option>
+              </select>
+            </div>
+
+            <div class="wiz-grid two">
+              <select class="wiz-select" id="s_condition">
+                <option value="">Condition</option>
+                <option>Excellent</option>
+                <option>Good</option>
+                <option>Fair</option>
+                <option>Poor</option>
+              </select>
+
+              <select class="wiz-select" id="s_timeline">
+                <option value="">Timeline to sell</option>
+                <option>ASAP (1–14 days)</option>
+                <option>30 days</option>
+                <option>60–90 days</option>
+                <option>Just exploring</option>
+              </select>
+            </div>
+
+            <div class="wiz-grid two">
+              <select class="wiz-select" id="s_mortgageLien">
+                <option value="">Do you have a mortgage or lien?</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>Not sure</option>
+              </select>
+
+              <input class="wiz-input" id="s_mortgageBalance" placeholder="Approx. mortgage balance (optional)">
+            </div>
+
+            <div class="wiz-grid two">
+              <input class="wiz-input" id="s_interestRate" placeholder="Interest rate (optional)">
+              <input class="wiz-input" id="s_otherLiens" placeholder="Other liens you know of? (optional)">
+            </div>
+
+            <div class="wiz-grid two">
+              <select class="wiz-select" id="s_foreclosureNotice">
+                <option value="">Foreclosure notice received?</option>
+                <option>No</option>
+                <option>Yes</option>
+                <option>Not sure</option>
+              </select>
+
+              <input class="wiz-input" id="s_foreclosureDate" type="date" style="display:none;">
+            </div>
+
+            <div class="wiz-grid">
+              <input class="wiz-input" id="s_foreclosureCaseOrTrustee" placeholder="Case # / Trustee info (optional)">
+            </div>
+
+            <div class="wiz-grid two">
+              <select class="wiz-select" id="s_reasonForSelling">
+                <option value="">Reason for selling (optional)</option>
+                <option>Foreclosure / behind on payments</option>
+                <option>Inherited / probate</option>
+                <option>Repairs too expensive</option>
+                <option>Tenant issues</option>
+                <option>Relocating</option>
+                <option>Divorce / separation</option>
+                <option>Other</option>
+              </select>
+
+              <select class="wiz-select" id="s_paymentsBehind">
+                <option value="">Payments behind (optional)</option>
+                <option>0</option>
+                <option>1</option>
+                <option>2–3</option>
+                <option>4+</option>
+                <option>Not sure</option>
+              </select>
+            </div>
+
+            <div class="wiz-grid two">
+              <select class="wiz-select" id="s_inYourName">
+                <option value="">Is the property in your name?</option>
+                <option>Yes</option>
+                <option>No</option>
+                <option>Inherited</option>
+                <option>Family member</option>
+                <option>Trust / LLC</option>
+                <option>Not sure</option>
+              </select>
+
+              <input class="wiz-input" id="s_otherOnDeed" placeholder="Anyone else on the deed? Names if known (optional)">
+            </div>
+
+            <div class="wiz-actions">
+              <button class="wiz-btn secondary" id="sellerBack2">Back</button>
+              <button class="wiz-btn" id="sellerContinue3">Continue</button>
+            </div>
+          </div>
+
+          <!-- STEP 3 -->
+          <div class="wiz-step" id="sellerStep3">
+            <div class="wiz-grid two">
+              <select class="wiz-select" id="s_bestReach">
+                <option value="">Best way to reach you</option>
+                <option>Call</option>
+                <option>Text</option>
+                <option>Either</option>
+              </select>
+
+              <select class="wiz-select" id="s_preferredTime">
+                <option value="">Preferred time</option>
+                <option>Morning</option>
+                <option>Afternoon</option>
+                <option>Evening</option>
+                <option>Anytime</option>
+              </select>
+            </div>
+
+            <div class="wiz-grid">
+              <select class="wiz-select" id="s_preferredTalk">
+                <option value="">How would you prefer we talk?</option>
+                <option>Phone</option>
+                <option>In person</option>
+                <option>Either</option>
+              </select>
+            </div>
+
+            <div class="wiz-grid">
+              <textarea class="wiz-textarea" id="s_notes" placeholder="Anything else we should know? (optional)"></textarea>
+            </div>
+
+            <label class="wiz-row">
+              <input type="checkbox" id="s_consent" required>
+              <span>
+                I agree to be contacted by Next Step Capital Group via call, text, and email (including automated means)
+                at the number/email provided regarding my property and options. Consent is not a condition of purchase.
+              </span>
+            </label>
+
+            <div class="wiz-actions">
+              <button class="wiz-btn secondary" id="sellerBack3">Back</button>
+              <button class="wiz-btn" id="sellerFinalSubmit">Submit &amp; Get Offer</button>
+            </div>
+          </div>
+
+          <p class="form-legal" style="margin-top:16px;">
+            By submitting this form, you authorize Next Step Capital Group, LLC and its affiliates to contact you via phone call, prerecorded voice, automated dialing system, text message, email, or in person regarding your property inquiry. Consent is not a condition of purchase. Message and data rates may apply. Reply STOP to opt out.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR PROCESS -->
+    <section class="why-section" style="padding-top:56px;padding-bottom:56px;">
+      <h2>How Our Process Works</h2>
+      <p class="hero-desc" style="text-align:center;margin:0 auto 6px auto;max-width:460px;">
+        Simple 4-step process. No pressure. No obligation. Most offers delivered in 24–48 hours.
+      </p>
+      <p class="hero-desc" style="text-align:center;margin:0 auto 24px auto;font-size:14px;max-width:460px;">
+        Based in Mission, TX — serving Hidalgo, Cameron &amp; Starr Counties.
+      </p>
+      <ul class="why-grid process-grid">
+        <li class="why-item">
+          <div class="why-icon">1</div>
+          <h3>Tell Us About Your Property (1‑Minute Form)</h3>
+          <p>Basic details only. No obligation. No pressure.</p>
+        </li>
+        <li class="why-item">
+          <div class="why-icon">2</div>
+          <h3>We Review Your Property &amp; Call You (No Obligation)</h3>
+          <p>We analyze the numbers and discuss your options.</p>
+        </li>
+        <li class="why-item">
+          <div class="why-icon">3</div>
+          <h3>Get Your Fair Cash Offer</h3>
+          <p>Clear, written offer with no hidden fees.</p>
+        </li>
+        <li class="why-item">
+          <div class="why-icon">4</div>
+          <h3>Close On Your Timeline — <strong>7 Days or Later</strong></h3>
+          <p>As fast as 7 days — or later if you need time.</p>
+          <p style="margin-top:8px;font-size:13px;color:var(--muted);">
+            ✔ No showings &nbsp; ✔ No repairs &nbsp; ✔ No cleaning
+          </p>
+        </li>
+      </ul>
+      <div style="text-align:center;margin-top:24px;">
+        <a href="#offer-form" class="btn">
+          Get My Fair Cash Offer
+        </a>
+      </div>
+    </section>
+
+    <!-- WHY SELLERS CHOOSE US -->
+    <section class="why-section">
+      <h2>Why Sellers Choose Us</h2>
+      <ul class="why-grid">
+        <li class="why-item">
+          <div class="why-icon">&#10003;</div>
+          <h3>We Buy As-Is</h3>
+          <p>No repairs, no cleaning, no prep work needed.</p>
+        </li>
+        <li class="why-item">
+          <div class="why-icon">$</div>
+          <h3>No Commissions. No Fees.</h3>
+          <p>The offer we make is the amount you receive.</p>
+        </li>
+        <li class="why-item">
+          <div class="why-icon">&#9202;</div>
+          <h3>Close On Your Timeline</h3>
+          <p>As fast as 7 days or whenever works for you.</p>
+          <p>Cash or flexible terms available depending on your situation.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- WE HELP WHEN YOU NEED TO SELL FAST -->
+    <section class="why-section">
+      <h2>We Help When You Need to Sell Fast</h2>
+      <ul class="why-grid">
+        <li class="why-item">
+          <div class="why-icon">&#9888;</div>
+          <h3>Facing Foreclosure?</h3>
+          <p>We move quickly and can help you avoid auction.</p>
+        </li>
+        <li class="why-item">
+          <div class="why-icon">&#128176;</div>
+          <h3>Behind on Payments?</h3>
+          <p>We buy houses with liens, late payments, or distress.</p>
+        </li>
+        <li class="why-item">
+          <div class="why-icon">&#127968;</div>
+          <h3>Inherited a Property?</h3>
+          <p>No repairs or cleanout required.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- MORE WAYS TO SELL -->
+    <section class="why-section">
+      <h2>More Ways to Sell</h2>
+      <ul class="why-grid">
+        <li class="why-item">
+          <div class="why-icon">$</div>
+          <h3>Fast Cash Offer</h3>
+          <p>Close quickly and move on with no repairs.</p>
+        </li>
+        <li class="why-item">
+          <div class="why-icon">&#128176;</div>
+          <h3>Flexible Terms</h3>
+          <p>Depending on your situation, payment-based solutions may be available.</p>
+        </li>
+        <li class="why-item">
+          <div class="why-icon">&#9202;</div>
+          <h3>Stay in the Home</h3>
+          <p>In some cases, structured options allow extra time or transition flexibility.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="why-section" style="padding-top:0;">
+      <div style="max-width:720px;margin:0 auto;">
+        <div>
+          <h3 style="font:700 16px/1.3 Montserrat,sans-serif;margin-bottom:6px;">Are you open to flexible solutions?</h3>
+          <p class="hero-desc" style="margin:0;text-align:left;">In certain situations, we may offer structured purchase options that allow for customized timelines and payment arrangements. All agreements are documented in writing and handled through professional closing services.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW WE MAKE MONEY -->
+    <section class="why-section" style="padding-top:0;">
+      <div style="max-width:720px;margin:0 auto;">
+        <h2>How We Make Money</h2>
+        <p class="hero-desc" style="margin:10px 0 0 0;text-align:left;">
+          We purchase properties at a discount based on condition, risk, and the work required. Depending on the property,
+          we may renovate and resell, keep it as a rental, assign our interest, or structure other lawful agreements.
+          All terms are documented in writing, reviewed before closing, and handled through professional closing services.
+        </p>
+      </div>
+    </section>
+
+    <!-- TRUSTED BY 160+ BUYERS -->
+    <section class="why-section" style="padding-top:0;">
+      <h2>Trusted by 160+ Buyers</h2>
+      <div style="text-align:center;margin-bottom:20px;">
+        <span style="font-size:26px;color:var(--gold2);">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <p style="margin-top:8px;color:var(--muted);">161 Five-Star Reviews</p>
+      </div>
+      <div style="display:grid;gap:20px;max-width:720px;margin:0 auto;">
+        <div style="padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--bg2);">
+          <p style="font-size:15px;">"Great communication and punctual. Smooth transaction."</p>
+          <p style="color:var(--gold2);font-weight:600;margin-top:8px;">— Verified Buyer</p>
+        </div>
+        <div style="padding:20px;border:1px solid var(--line);border-radius:12px;background:var(--bg2);">
+          <p style="font-size:15px;">"Fair pricing and exactly as described."</p>
+          <p style="color:var(--gold2);font-weight:600;margin-top:8px;">— Verified Buyer</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="why-section">
+      <h2>Common Questions</h2>
+      <div style="max-width:720px;margin:0 auto;display:grid;gap:18px;">
+        <div>
+          <h3 style="font:700 16px/1.3 Montserrat,sans-serif;margin-bottom:6px;">Do you charge any fees?</h3>
+          <p class="hero-desc" style="margin:0;text-align:left;">No. There are no commissions or hidden costs.</p>
+        </div>
+        <div>
+          <h3 style="font:700 16px/1.3 Montserrat,sans-serif;margin-bottom:6px;">Do I need to fix anything?</h3>
+          <p class="hero-desc" style="margin:0;text-align:left;">No. We buy properties as-is, in any condition.</p>
+        </div>
+        <div>
+          <h3 style="font:700 16px/1.3 Montserrat,sans-serif;margin-bottom:6px;">How fast can you close?</h3>
+          <p class="hero-desc" style="margin:0;text-align:left;">As fast as 7 days, or on your preferred timeline.</p>
+        </div>
+        <div>
+          <h3 style="font:700 16px/1.3 Montserrat,sans-serif;margin-bottom:6px;">What if I owe close to what my home is worth?</h3>
+          <p class="hero-desc" style="margin:0;text-align:left;">We have multiple ways to structure solutions. In certain cases, flexible terms may allow us to create a win-win agreement.</p>
+        </div>
+        <div>
+          <h3 style="font:700 16px/1.3 Montserrat,sans-serif;margin-bottom:6px;">How do you buy properties?</h3>
+          <p class="hero-desc" style="margin:0;text-align:left;">We purchase properties using cash or other structured agreements depending on the situation. All agreements are documented in writing and reviewed prior to closing.</p>
+        </div>
+        <div>
+          <h3 style="font:700 16px/1.3 Montserrat,sans-serif;margin-bottom:6px;">What types of purchase agreements do you use?</h3>
+          <p class="hero-desc" style="margin:0;text-align:left;">Depending on the situation, we may purchase using cash, installment agreements, structured financing, or other lawful acquisition strategies. All agreements are documented in writing and reviewed prior to closing.</p>
+        </div>
+      </div>
+    </section>
+
+    <p style="text-align:center;color:var(--muted);margin-top:20px;font-size:14px;">
+      Serving Hidalgo County, Cameron County, Starr County and surrounding areas.
+    </p>
+
+    <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:30px;max-width:700px;margin-left:auto;margin-right:auto;">
+      Next Step Capital Group, LLC is a private real estate acquisition company. We are not a law firm or financial advisory firm. All property purchases are subject to written agreement and due diligence.
+    </p>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-left">
+        <strong style="color:var(--text)">Next Step Capital Group, LLC</strong><br>
+        Based in Mission, Texas &bull; Serving Texas Statewide<br>
+        Phone: <a href="tel:+19567620089">(956) 762-0089</a>
+        &bull; <a href="/investors.html">Investor Access</a>
+      </div>
+      <div class="footer-right">
+        &copy; <span id="y"></span> Next Step Capital Group, LLC<br>
+        <a href="/privacy.html">Privacy Policy</a> |
+        <a href="/terms.html">Terms of Service</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Sticky mobile CTA -->
+  <div id="mobile-cta" style="position:fixed;bottom:0;left:0;width:100%;background:#020915;padding:12px;display:none;z-index:999;border-top:1px solid var(--line);">
+    <a href="#offer-form" style="display:block;text-align:center;background:var(--gold);color:#020915;padding:14px;border-radius:8px;font-weight:700;text-decoration:none;font-size:15px;">
+      Get My Fast Cash Offer Now
+    </a>
+  </div>
+
+  <script>
+    // footer year + mobile CTA
+    document.getElementById("y").textContent = new Date().getFullYear();
+    if (window.innerWidth < 768) {
+      document.getElementById("mobile-cta").style.display = "block";
+    }
+    window.addEventListener("resize", function() {
+      document.getElementById("mobile-cta").style.display = window.innerWidth < 768 ? "block" : "none";
+    });
+
+    // === Seller Wizard → Google Sheets (Apps Script Web App) ===
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwQkYuL-qWBYLXS5XowSOAZS4CtJN4QjtsvetM_ADXeXIzZyZKY82PINnBP5rp151WX/exec";
+    const THANK_YOU_URL = "thanks.html";
+
+    function wiz$(id){ return document.getElementById(id); }
+
+    function makeId(prefix){
+      const r = (crypto && crypto.getRandomValues) ? crypto.getRandomValues(new Uint32Array(2)) : [Date.now(), Math.random()*1e9|0];
+      return `${prefix}-${r[0].toString(16)}${r[1].toString(16)}`;
+    }
+
+    function setSellerStatus(msg){
+      wiz$("sellerStatus").textContent = msg || "";
+    }
+
+    function setSellerStep(n){
+      const steps = [wiz$("sellerStep1"), wiz$("sellerStep2"), wiz$("sellerStep3")];
+      steps.forEach((el,i)=> el.classList.toggle("active", i===n-1));
+      wiz$("sellerStepLabel").textContent = `${n} / 3`;
+      wiz$("sellerProg").style.width = n===1 ? "33%" : (n===2 ? "66%" : "100%");
+    }
+
+    async function postToSheets(payload){
+      const res = await fetch(SCRIPT_URL, {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(payload)
+      });
+      const text = await res.text();
+      let json;
+      try { json = JSON.parse(text); } catch (_) { return { ok: false, error: res.ok ? "Invalid response" : "Server error " + res.status }; }
+      if (!res.ok) return { ok: false, error: (json && json.error) ? json.error : "Server error " + res.status };
+      return json;
+    }
+
+    let SELLER_LEAD_ID = localStorage.getItem("SELLER_LEAD_ID") || "";
+
+    function sellerPayload(stage){
+      return {
+        leadType: "seller",
+        stage,
+        leadId: SELLER_LEAD_ID,
+        page: window.location.href,
+        userAgent: navigator.userAgent,
+
+        name: wiz$("s_name").value.trim(),
+        phone: wiz$("s_phone").value.trim(),
+        email: "",
+
+        propertyAddress: wiz$("s_address").value.trim(),
+        city: wiz$("s_city").value.trim(),
+        state: wiz$("s_state").value.trim() || "TX",
+        zip: wiz$("s_zip").value.trim(),
+
+        occupancy: wiz$("s_occupancy").value,
+        propertyType: wiz$("s_propertyType").value,
+        condition: wiz$("s_condition").value,
+        timeline: wiz$("s_timeline").value,
+
+        mortgageLien: wiz$("s_mortgageLien").value,
+        mortgageBalance: wiz$("s_mortgageBalance").value.trim(),
+        interestRate: wiz$("s_interestRate").value.trim(),
+        otherLiens: wiz$("s_otherLiens").value.trim(),
+
+        foreclosureNotice: wiz$("s_foreclosureNotice").value,
+        foreclosureDate: wiz$("s_foreclosureDate").value,
+        foreclosureCaseOrTrustee: wiz$("s_foreclosureCaseOrTrustee").value.trim(),
+
+        reasonForSelling: wiz$("s_reasonForSelling").value,
+        paymentsBehind: wiz$("s_paymentsBehind").value,
+        inYourName: wiz$("s_inYourName").value,
+        otherOnDeed: wiz$("s_otherOnDeed").value.trim(),
+
+        notes: wiz$("s_notes").value.trim(),
+        bestReach: wiz$("s_bestReach").value,
+        preferredTime: wiz$("s_preferredTime").value,
+        preferredTalk: wiz$("s_preferredTalk").value,
+
+        consent: wiz$("s_consent").checked
+      };
+    }
+
+    // Foreclosure conditional date field
+    wiz$("s_foreclosureNotice").addEventListener("change", () => {
+      const v = wiz$("s_foreclosureNotice").value;
+      wiz$("s_foreclosureDate").style.display = (v === "Yes") ? "block" : "none";
+      if (v !== "Yes") wiz$("s_foreclosureDate").value = "";
+    });
+
+    // Step 1: Save & Continue (PARTIAL CAPTURE)
+    wiz$("sellerSaveContinue").addEventListener("click", async () => {
+      setSellerStatus("");
+
+      if (!wiz$("s_name").value.trim() || !wiz$("s_phone").value.trim() || !wiz$("s_address").value.trim()){
+        setSellerStatus("⚠️ Please enter Name, Phone, and Property Address.");
+        return;
+      }
+
+      if (!SELLER_LEAD_ID){
+        SELLER_LEAD_ID = makeId("lead");
+        localStorage.setItem("SELLER_LEAD_ID", SELLER_LEAD_ID);
+      }
+
+      wiz$("sellerSaveContinue").disabled = true;
+      setSellerStatus("Submitting…");
+
+      try {
+        const json = await postToSheets(sellerPayload("partial"));
+        if (json && json.ok){
+          setSellerStatus("✅ Saved. Continue below.");
+          setSellerStep(2);
+        } else {
+          setSellerStatus("⚠️ " + (json && json.error ? json.error : "Could not save. Please try again or call/text us."));
+        }
+      } catch (e){
+        var msg = "⚠️ Network error. Please try again or call (956) 762-0089.";
+        if (window.location.protocol === "file:") msg = "⚠️ Forms don’t work when the page is opened from your computer. Run a local server (e.g. \"npx serve\" in this folder) and open http://localhost:3000 — or test on your live site.";
+        setSellerStatus(msg);
+        console.error("Seller form submit error:", e);
+      } finally {
+        wiz$("sellerSaveContinue").disabled = false;
+      }
+    });
+
+    // Step navigation
+    wiz$("sellerBack2").addEventListener("click", () => setSellerStep(1));
+    wiz$("sellerContinue3").addEventListener("click", () => setSellerStep(3));
+    wiz$("sellerBack3").addEventListener("click", () => setSellerStep(2));
+
+    // Final submit (FULL)
+    wiz$("sellerFinalSubmit").addEventListener("click", async () => {
+      setSellerStatus("");
+
+      if (!SELLER_LEAD_ID){
+        setSellerStatus("⚠️ Please complete Step 1 first.");
+        setSellerStep(1);
+        return;
+      }
+      if (!wiz$("s_consent").checked){
+        setSellerStatus("⚠️ Please check the consent box to submit.");
+        return;
+      }
+
+      wiz$("sellerFinalSubmit").disabled = true;
+      setSellerStatus("Submitting final details…");
+
+      try {
+        const json = await postToSheets(sellerPayload("full"));
+        if (json && json.ok){
+          localStorage.removeItem("SELLER_LEAD_ID");
+          SELLER_LEAD_ID = "";
+          window.location.href = THANK_YOU_URL;
+        } else {
+          setSellerStatus("⚠️ " + (json && json.error ? json.error : "Submission failed. Please try again."));
+        }
+      } catch (e){
+        var msg = "⚠️ Network error. Please try again or call (956) 762-0089.";
+        if (window.location.protocol === "file:") msg = "⚠️ Forms don’t work when the page is opened from your computer. Run a local server (e.g. \"npx serve\" in this folder) and open http://localhost:3000 — or test on your live site.";
+        setSellerStatus(msg);
+        console.error("Seller form submit error:", e);
+      } finally {
+        wiz$("sellerFinalSubmit").disabled = false;
+      }
+    });
+
+    // initialize
+    setSellerStep(1);
+  </script>
+</body>
+</html>
