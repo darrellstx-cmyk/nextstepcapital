@@ -316,6 +316,75 @@
       .brand-text h1 { font-size: 11px; }
       .brand-text small { font-size: 10px; }
     }
+
+    /* ── MOBILE ENHANCEMENTS ── */
+
+    /* Prevent iOS Safari from zooming in on form inputs */
+    .wiz-input, .wiz-select, .wiz-textarea,
+    input, select, textarea {
+      font-size: 16px !important;
+    }
+
+    /* Minimum 48px touch targets + eliminate 300ms tap delay */
+    .btn, .wiz-btn, a, button {
+      touch-action: manipulation;
+    }
+    .wiz-btn {
+      min-height: 48px;
+    }
+    .btn {
+      min-height: 48px;
+    }
+
+    /* Add bottom padding so footer is never hidden */
+    @media (max-width: 767px) {
+      body { padding-bottom: 24px; }
+    }
+
+    /* Stack wizard header + full-width buttons on small screens */
+    @media (max-width: 580px) {
+      .form-wrapper {
+        padding: 22px 16px;
+      }
+      .wiz-top {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+      .wiz-top > div {
+        min-width: 0 !important;
+      }
+      #invStepLabel {
+        text-align: right !important;
+        min-width: 0 !important;
+      }
+      .wiz-progress {
+        min-width: 0 !important;
+        width: 100%;
+      }
+      .wiz-card {
+        padding: 14px;
+      }
+      .wiz-actions {
+        flex-direction: column-reverse;
+        justify-content: stretch;
+        gap: 8px;
+      }
+      .wiz-actions .wiz-btn {
+        width: 100%;
+        text-align: center;
+        padding: 14px 12px;
+        justify-content: center;
+        font-size: 16px;
+      }
+      .wiz-row input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+        cursor: pointer;
+      }
+    }
   </style>
 </head>
 
@@ -442,11 +511,11 @@
           <!-- STEP 1 -->
           <div class="wiz-step active" id="invStep1">
             <div class="wiz-grid two">
-              <input class="wiz-input" id="i_name" placeholder="Full Name *" required>
-              <input class="wiz-input" id="i_phone" placeholder="Phone *" required>
+              <input class="wiz-input" id="i_name" placeholder="Full Name *" autocomplete="name" required>
+              <input class="wiz-input" id="i_phone" placeholder="Phone *" autocomplete="tel" inputmode="tel" required>
             </div>
             <div class="wiz-grid">
-              <input class="wiz-input" id="i_email" placeholder="Email *" required>
+              <input class="wiz-input" id="i_email" placeholder="Email *" autocomplete="email" inputmode="email" required>
             </div>
             <div class="wiz-grid">
               <input class="wiz-input" id="i_markets" placeholder="Markets (Cities/Counties/Zips) *" required>
@@ -553,6 +622,9 @@
       inv$("invStep2").classList.toggle("active", n===2);
       inv$("invStepLabel").textContent = `${n} / 2`;
       inv$("invProg").style.width = n===1 ? "50%" : "100%";
+      if (n > 1) {
+        inv$("investor-intake").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
 
     async function invPost(payload){

@@ -529,14 +529,88 @@
         max-width: 360px;
       }
     }
+
+    /* ── MOBILE ENHANCEMENTS ── */
+
+    /* Prevent iOS Safari from zooming in on form inputs */
+    .wiz-input, .wiz-select, .wiz-textarea,
+    input, select, textarea {
+      font-size: 16px !important;
+    }
+
+    /* Minimum 48px touch targets + eliminate 300ms tap delay */
+    .btn, .wiz-btn, a, button {
+      touch-action: manipulation;
+    }
+    .wiz-btn {
+      min-height: 48px;
+    }
+    .btn {
+      min-height: 48px;
+    }
+
+    /* Add bottom padding so sticky bar never covers footer content */
+    @media (max-width: 767px) {
+      body { padding-bottom: 72px; }
+    }
+
+    /* Stack the wizard header on small screens */
+    @media (max-width: 580px) {
+      .wiz-top {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+      .wiz-top > div:first-child {
+        min-width: unset !important;
+      }
+      #sellerStepLabel {
+        text-align: left !important;
+        min-width: unset !important;
+      }
+      .wiz-progress {
+        min-width: unset;
+      }
+      .wiz-card {
+        padding: 14px 12px;
+      }
+
+      /* Full-width, stacked action buttons for easy tapping */
+      .wiz-actions {
+        flex-direction: column-reverse;
+        gap: 8px;
+      }
+      .wiz-btn {
+        width: 100%;
+        text-align: center;
+        padding: 14px 12px;
+        justify-content: center;
+        font-size: 16px;
+      }
+
+      /* Larger checkbox tap area */
+      .wiz-row input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+        flex-shrink: 0;
+        margin-top: 1px;
+        cursor: pointer;
+      }
+
+      /* Announcement bar: tighter on tiny screens */
+      .top-announcement {
+        font-size: 12px;
+        padding: 8px 12px;
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <div class="top-announcement">
-    RGV Homeowners: Get a Direct Cash Offer in 24–48 Hours
-  </div>
+  <a class="top-announcement" href="tel:+19567620089" style="display:block;text-decoration:none;color:inherit;">
+    RGV Homeowners: Get a Direct Cash Offer in 24–48 Hours &mdash; Tap to Call
+  </a>
 
   <!-- NAV -->
   <div class="nav-outer">
@@ -621,7 +695,7 @@
           <div class="wiz-step active" id="sellerStep1">
             <div class="wiz-grid two">
               <input class="wiz-input" id="s_name" placeholder="Full Name *" autocomplete="name" required>
-              <input class="wiz-input" id="s_phone" placeholder="Phone Number *" autocomplete="tel" required>
+              <input class="wiz-input" id="s_phone" placeholder="Phone Number *" autocomplete="tel" inputmode="tel" required>
             </div>
 
             <div class="wiz-grid">
@@ -631,7 +705,7 @@
             <div class="wiz-grid three">
               <input class="wiz-input" id="s_city" placeholder="City" autocomplete="address-level2">
               <input class="wiz-input" id="s_state" placeholder="State" value="TX" autocomplete="address-level1">
-              <input class="wiz-input" id="s_zip" placeholder="Zip" autocomplete="postal-code">
+              <input class="wiz-input" id="s_zip" placeholder="Zip" autocomplete="postal-code" inputmode="numeric">
             </div>
 
             <div class="wiz-actions">
@@ -688,7 +762,7 @@
                 <option>Not sure</option>
               </select>
 
-              <input class="wiz-input" id="s_mortgageBalance" placeholder="Approx. mortgage balance (optional)">
+              <input class="wiz-input" id="s_mortgageBalance" placeholder="Approx. mortgage balance (optional)" inputmode="decimal">
             </div>
 
             <div class="wiz-grid two">
@@ -1017,14 +1091,20 @@
   </div>
 
   <script>
-    // footer year + mobile CTA
+    // footer year
     document.getElementById("y").textContent = new Date().getFullYear();
-    if (window.innerWidth < 768) {
-      document.getElementById("mobile-cta").style.display = "block";
+
+    // Sticky mobile CTA — only show after user scrolls past the hero CTA button
+    var mobileCta = document.getElementById("mobile-cta");
+    var heroCtaBtn = document.querySelector(".hero-cta");
+    function updateMobileCta() {
+      if (window.innerWidth >= 768) { mobileCta.style.display = "none"; return; }
+      var rect = heroCtaBtn ? heroCtaBtn.getBoundingClientRect() : { bottom: -1 };
+      mobileCta.style.display = rect.bottom < 0 ? "block" : "none";
     }
-    window.addEventListener("resize", function() {
-      document.getElementById("mobile-cta").style.display = window.innerWidth < 768 ? "block" : "none";
-    });
+    window.addEventListener("scroll", updateMobileCta, { passive: true });
+    window.addEventListener("resize", updateMobileCta);
+    updateMobileCta();
 
     // === Seller Wizard → Google Sheets (Apps Script Web App) ===
     const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwQkYuL-qWBYLXS5XowSOAZS4CtJN4QjtsvetM_ADXeXIzZyZKY82PINnBP5rp151WX/exec";
@@ -1046,6 +1126,9 @@
       steps.forEach((el,i)=> el.classList.toggle("active", i===n-1));
       wiz$("sellerStepLabel").textContent = `${n} / 3`;
       wiz$("sellerProg").style.width = n===1 ? "33%" : (n===2 ? "66%" : "100%");
+      if (n > 1) {
+        wiz$("seller-intake").scrollIntoView({ behavior: "smooth", block: "start" });
+      }
     }
 
     async function postToSheets(payload){
